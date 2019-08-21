@@ -13,15 +13,15 @@ class User {
   }
   
   matchInterests(event){
-    console.log(this.interests)
+    
     return event.keywords.some(function(word){
       return this.interests.includes(word)
-    });
+    }.bind(this));
   }
 }
 
 let billy = new User('billy', ['music', 'art', 'movies']);
 let freeMusic = new Event('Free Music Show', ['music', 'free', 'outside'])
 
-console.log(billy)
+
 console.log(billy.matchInterests(freeMusic))
