@@ -7,11 +7,10 @@ class Event {
 }
 
 class User {
-  consructor(name, interests){
-    this.name = name;
-    this.interests = interests;
-  }
-  
+    constructor(name, interests) {
+        this.name = name;
+        this.interests = interests;
+    }
   matchInterests(event){
     
     return event.keywords.some(function(word){
