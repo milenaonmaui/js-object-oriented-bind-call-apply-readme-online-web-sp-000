@@ -23,5 +23,5 @@ class User {
 let billy = new User('billy', ['music', 'art', 'movies'])
 let freeMusic = new Event('Free MusicShow', ['music', 'free', 'outside'])
 
-console.log(billy.interests)
+console.log(billy)
 console.log(billy.matchInterests(freeMusic))
