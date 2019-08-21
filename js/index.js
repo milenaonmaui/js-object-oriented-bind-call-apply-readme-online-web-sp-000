@@ -14,6 +14,7 @@ class User {
   
   matchInterests(event){
     return event.keywords.some(function(word){
+      console.log(this)
       return this.interests.includes(word)
     });
   }
