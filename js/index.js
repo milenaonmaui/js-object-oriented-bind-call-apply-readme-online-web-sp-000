@@ -13,8 +13,8 @@ class User {
   }
   
   matchInterests(event){
+    console.log(this)
     return event.keywords.some(function(word){
-      console.log(this)
       return this.interests.includes(word)
     });
   }
