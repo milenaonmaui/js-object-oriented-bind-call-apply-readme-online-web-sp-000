@@ -11,12 +11,13 @@ class User {
         this.name = name;
         this.interests = interests;
     }
-  matchInterests(event){
-    
-    return event.keywords.some(function(word){
-      return this.interests.includes(word)
-    }.bind(this));
-  }
+  matchInterests(event) {
+        return event.keywords.some(
+            function(word) {
+                return this.interests.includes(word);
+            }.bind(this) // added to the and of the callback function
+        );
+    }
 }
 
 let billy = new User('billy', ['music', 'art', 'movies']);
