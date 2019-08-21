@@ -15,7 +15,7 @@ class User {
         return event.keywords.some(
             function(word) {
                 return this.interests.includes(word);
-            }.bind(this) // added to the and of the callback function
+            }.bind(this) 
         );
     }
 }
@@ -23,5 +23,5 @@ class User {
 
 let billy = new User('billy', ['music', 'art', 'movies']);
 let freeMusic = new Event('Free Music Show', ['music', 'free', 'outside']);
-console.log(billy.interests)
+
 console.log(billy.matchInterests(freeMusic));
